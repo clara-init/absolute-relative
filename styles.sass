@@ -1,0 +1,52 @@
+*
+    position: relative
+    // border: solid 1px
+    font-family: 微軟正黑體
+    
+$light_gray: #DCDCDC
+
+@mixin size($w,$h)
+    width: $w
+    height: $h
+
+body,html
+    +size(100%,100%)
+    padding: 0px
+    margin: 0px
+    background-color: $light_gray
+    overflow: hidden
+
+.phone
+    border: solid 1px gray
+    border-radius: 5px
+    width: 180px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 110px
+
+.top
+    +size(100%,100px)
+    background-color: gray
+    border-radius: 5px 5px 0px 0px
+
+.bottom
+    +size(100%,150px)
+    background-color: white
+    border-radius: 0px 0px 5px 5px
+
+.headpic
+    +size(60px,60px)
+    position: absolute
+    top:-30px
+    left: 15px
+    border: solid 1px $light_gray
+    border-radius: 5px
+    & img
+        +size(100%,100%)
+        border-radius: 5px
+        object-fit: cover
+
+.name
+    color: white
+    bottom: 55px
+    left: 70px
